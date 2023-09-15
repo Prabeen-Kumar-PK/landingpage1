@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Grape+Nuts&family=Russo+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #AB8F97;
+    display: flex;
+    position: relative;
+}
+
+
+nav {
+    position: absolute;
+    left: 3%;
+    top: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+
+    width: 350px;
+    z-index: 99;
+}
+
+nav img {
+    height: 60px;
+}
+
+
+nav h5 {
+    font-size: 12px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+}
+
+
+#part1 {
+    height: 100%;
+    width: 20%;
+    /* background-color: rebeccapurple; */
+}
+
+#part2 {
+    height: 100%;
+    width: 74%;
+    background-color: rgb(71, 153, 51);
+    background-image: url("https://images.unsplash.com/photo-1604681630513-69474a4e253f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2127&q=80");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.267);
+}
+
+#part3 {
+    height: 100%;
+    width: 6%;
+    /* background-color: rgb(153, 51, 51); */
+}
+
+
+
+#text-div {
+    height: 350px;
+    position: absolute;
+    width: 600px;
+    /* background-color: red; */
+    left: 7%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#text-div h1 {
+    font-size: 95px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 78px;
+    letter-spacing: 10px;
+    color: #fff;
+}
+
+#small-img-div {
+    height: 400px;
+    width: 300px;
+    background-image: url("https://images.unsplash.com/photo-1604514775346-3f40ef356d68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+
+    position: absolute;
+    top: 75%;
+    right: 7%;
+    transform: translate(0, -50%);
+    border-radius: 10%;
+}
+
+#vertical-text {
+    position: absolute;
+    /* width: 100%; */
+    transform: rotate(90deg);
+    transform-origin: 0%;
+    right: -41.5%;
+    top: -4%;
+
+}
+
+.in {
+    border-radius: 10%;
+}
+
+#vertical-text h1 {
+    font-size: 70px;
+    font-weight: 900;
+    color: transparent;
+    letter-spacing: 15px;
+
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+    -webkit-text-stroke-width: .1px;
+    -webkit-text-stroke-color: #fff;
+
+}
