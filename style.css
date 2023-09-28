@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Grape+Nuts&family=Russo+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 * {
     margin: 0;
@@ -10,139 +9,253 @@
 html,
 body {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+}
+
+
+nav {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 100px;
+    padding-left: 5.7em;
+    padding-top: 2.5em;
+    color: aliceblue;
+    background-color: transparent;
+    height: 70px;
+}
+
+nav img {
+    width: 50px;
+}
+
+nav h5 {
+    font-size: 12px;
 }
 
 #main {
     height: 100%;
     width: 100%;
-    overflow: hidden;
     background-color: #AB8F97;
     display: flex;
     position: relative;
+    overflow: hidden;
 }
-
-
-nav {
-    position: absolute;
-    left: 3%;
-    top: 5%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 90px;
-
-    width: 350px;
-    z-index: 99;
-}
-
-nav img {
-    height: 60px;
-}
-
-
-nav h5 {
-    font-size: 12px;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 900;
-}
-
 
 #part1 {
     height: 100%;
-    width: 20%;
-    /* background-color: rebeccapurple; */
+    width: 15%;
+    /* background-color: red; */
 }
 
 #part2 {
     height: 100%;
-    width: 74%;
-    background-color: rgb(71, 153, 51);
+    width: 77%;
     background-image: url("https://images.unsplash.com/photo-1604681630513-69474a4e253f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2127&q=80");
 
-    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    transform: scaleX(-1);
+    background-position: center;
+
+    background-attachment: fixed;
+    /* background-color: blue; */
 }
 
 .overlay {
-    height: 100%;
+    height: inherit;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.267);
+    background: #0d0d0e46;
+
+}
+
+
+#text-div {
+    position: absolute;
+    top: 47%;
+    left: 2.4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 2px;
+    width: 600px;
+}
+
+#text-div div {
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    width: 520px;
+    font-size: 5rem;
+    color: aliceblue;
+    font-family: 'Archivo Black', sans-serif;
+    text-transform: uppercase;
+    line-height: 5.1rem;
+    transition: all .5s;
+}
+
+#text-div div:hover {
+    scale: 1.3;
+}
+
+#small-img-div {
+    position: absolute;
+    right: 5%;
+    top: 43%;
+
+    background-image: url("https://images.unsplash.com/photo-1604514775346-3f40ef356d68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 99;
+
+
+    height: 380px;
+    width: 250px;
+    transition: all .5s;
+
+
+}
+
+#small-img-div:hover {
+    scale: 1.5;
+}
+
+.overlay-in {
+    width: 100%;
+    height: 100%;
+    background-color: #6d6c6c23;
+}
+
+
+#vertical-text {
+    position: fixed;
+    z-index: 999;
+    transform: rotate(90deg);
+    transform-origin: 0% 0%;
+    font-weight: bold;
+    top: 2%;
+    right: -43%;
+}
+
+
+#vertical-text h1 {
+    font-weight: bold;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 4em;
+
+
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: aliceblue;
+    color: transparent;
+    letter-spacing: 20px;
+
+
 }
 
 #part3 {
     height: 100%;
-    width: 6%;
-    /* background-color: rgb(153, 51, 51); */
+    width: 7%;
 }
 
 
+@media screen and (max-width:1042px) {
 
-#text-div {
-    height: 350px;
-    position: absolute;
-    width: 600px;
-    /* background-color: red; */
-    left: 7%;
-    top: 50%;
-    transform: translate(0, -50%);
+    #vertical-text {
+        transform: rotate(0);
+        right: 0;
+        text-align: center;
+        bottom: 0;
+        padding: 10em 0;
+    }
 }
 
-#text-div h1 {
-    font-size: 95px;
-    font-family: 'Russo One', sans-serif;
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 78px;
-    letter-spacing: 10px;
-    color: #fff;
+@media screen and (max-width:835px) {
+
+    #main {
+        overflow-y: scroll;
+    }
+
+
+
+    #part2 {
+        height: fit-content;
+        width: 100vw;
+
+
+    }
+
+    #vertical-text {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
+    #part1,
+    #part3 {
+        display: none;
+    }
+
+    #part2 .overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #text-div {
+        margin-top: 5rem;
+        position: static;
+
+    }
+
+    #small-img-div {
+        position: static;
+    }
 }
 
-#small-img-div {
-    height: 400px;
-    width: 300px;
-    background-image: url("https://images.unsplash.com/photo-1604514775346-3f40ef356d68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80");
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+@media screen and (max-width:538px) {
 
+    #main {
+        overflow-x: hidden;
+    }
 
+    nav {
+        padding-left: 1.7em;
+        padding-top: 3.7em;
 
-    position: absolute;
-    top: 75%;
-    right: 7%;
-    transform: translate(0, -50%);
-    border-radius: 10%;
-}
+    }
 
-#vertical-text {
-    position: absolute;
-    /* width: 100%; */
-    transform: rotate(90deg);
-    transform-origin: 0%;
-    right: -41.5%;
-    top: -4%;
+    #text-div {
 
-}
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
 
-.in {
-    border-radius: 10%;
-}
+    }
 
-#vertical-text h1 {
-    font-size: 70px;
-    font-weight: 900;
-    color: transparent;
-    letter-spacing: 15px;
+    #text-div div {
 
-    text-transform: uppercase;
-    font-family: 'Russo One', sans-serif;
-    -webkit-text-stroke-width: .1px;
-    -webkit-text-stroke-color: #fff;
+        font-size: 1.5em;
+        line-height: 1.4em;
+    }
+
+    #vertical-text h1 {
+        font-size: 2em;
+
+    }
+
 
 }
