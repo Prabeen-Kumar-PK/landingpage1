@@ -168,10 +168,20 @@ nav h5 {
 
     #vertical-text {
         transform: rotate(0);
-        right: 0;
         text-align: center;
-        bottom: 0;
         padding: 10em 0;
+        white-space: nowrap;
+        animation: scroll 5s linear infinite;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(calc(-200%));
+        }
+
+        100% {
+            transform: translateX(100%);
+        }
     }
 }
 
@@ -179,24 +189,29 @@ nav h5 {
 
     #main {
         overflow-y: scroll;
+    
+     
     }
 
 
 
     #part2 {
-        height: fit-content;
+        height:100vh;
         width: 100vw;
 
 
     }
 
+    
     #vertical-text {
-        position: static;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
+        position: absolute;
+        display: inline-flex;
+        width: 100%;
+        animation: scroll 3s linear infinite;
     }
+
+
+
 
 
     #part1,
@@ -236,8 +251,6 @@ nav h5 {
     }
 
     #text-div {
-
-        display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
@@ -253,9 +266,19 @@ nav h5 {
     }
 
     #vertical-text h1 {
-        font-size: 2em;
+        font-size: 3em;
+        animation-duration: 4s;
 
     }
 
+    @keyframes scroll {
+        0% {
+            transform: translateX(calc(-300%));
+        }
+
+        100% {
+            transform: translateX(150%);
+        }
+    }
 
 }
